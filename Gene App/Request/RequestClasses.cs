@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
-namespace Gene_App
+namespace Gene_App.Request
 {
     
     class Token
@@ -40,30 +42,54 @@ namespace Gene_App
     }
     class JobRequest
     {
-        class Job
-        {
-            readonly string id;
-            readonly string type;
-            readonly string strand;
-            readonly string strandEncoded;
-            readonly string geneEncodded;
-
-            public string Id => id;
-
-            public string Type => type;
-
-            public string Strand => strand;
-
-            public string StrandEncoded => strandEncoded;
-
-            public string GeneEncodded => geneEncodded;
-        }
-        readonly string code;
-        readonly string message;
+        [JsonProperty("job")]
+        job jobResult;
+        [JsonProperty("code")]
+        string code;
+        
+        string message;
 
         public string Code => code;
 
         public string Message => message;
+
+        public job JobResult => jobResult;
+        
+        
+        
+    }
+    public class job
+    {
+        [JsonProperty("id")]
+        string id;
+        [JsonProperty("type")]
+        string type;
+        [JsonProperty("strand")]
+        string strand;
+        [JsonProperty("strandEncoded")]
+        string strandEncoded;
+        [JsonProperty("geneEncoded")]
+        string geneEncoded;
+
+        public string Id => id;
+
+        public string Type => type;
+
+        public string Strand => strand;
+
+        public string StrandEncoded => strandEncoded;
+
+        public string GeneEncoded => geneEncoded;
+    }
+    internal class JobCompletedRequest
+    {
+        string strandEncoded;
+        string strand;
+        bool isActivated;
+
+        public string StrandEncoded { get => strandEncoded; set => strandEncoded = value; }
+        public string Strand { get => strand; set => strand = value; }
+        public bool IsActivated { get => isActivated; set => isActivated = value; }
     }
 
 }

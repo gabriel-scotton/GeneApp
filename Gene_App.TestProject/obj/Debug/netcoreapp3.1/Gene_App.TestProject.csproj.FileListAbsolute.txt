@@ -1,9 +1,5 @@
 A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\CoverletSourceRootsMapping
 A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\testhost.dll
-A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\Gene App.deps.json
-A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\Gene App.runtimeconfig.json
-A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\Gene App.runtimeconfig.dev.json
-A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\Gene App.exe
 A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\testhost.exe
 A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.PlatformAbstractions.dll
 A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
@@ -91,8 +87,6 @@ A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\zh-Hans\Micro
 A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\Gene App.dll
-A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\Gene App.pdb
 A:\Estudo\C#\Learn C#\Gene_App.TestProject\obj\Debug\netcoreapp3.1\Gene_App.TestProject.csproj.AssemblyReference.cache
 A:\Estudo\C#\Learn C#\Gene_App.TestProject\obj\Debug\netcoreapp3.1\Gene_App.TestProject.AssemblyInfoInputs.cache
 A:\Estudo\C#\Learn C#\Gene_App.TestProject\obj\Debug\netcoreapp3.1\Gene_App.TestProject.AssemblyInfo.cs
@@ -101,3 +95,10 @@ A:\Estudo\C#\Learn C#\Gene_App.TestProject\obj\Debug\netcoreapp3.1\Gene_App.Test
 A:\Estudo\C#\Learn C#\Gene_App.TestProject\obj\Debug\netcoreapp3.1\Gene_App.TestProject.dll
 A:\Estudo\C#\Learn C#\Gene_App.TestProject\obj\Debug\netcoreapp3.1\Gene_App.TestProject.pdb
 A:\Estudo\C#\Learn C#\Gene_App.TestProject\obj\Debug\netcoreapp3.1\Gene_App.TestProject.genruntimeconfig.cache
+A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\Gene_App.deps.json
+A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\Gene_App.runtimeconfig.json
+A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\Gene_App.runtimeconfig.dev.json
+A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\Gene_App.exe
+A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\Gene_App.dll
+A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\Gene_App.pdb
+A:\Estudo\C#\Learn C#\Gene_App.TestProject\bin\Debug\netcoreapp3.1\Json.Net.dll

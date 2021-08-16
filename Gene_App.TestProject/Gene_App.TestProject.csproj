@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Gene App\Gene App.csproj" />
+    <ProjectReference Include="..\Gene App\Gene_App.csproj" />
   </ItemGroup>
 
 </Project>

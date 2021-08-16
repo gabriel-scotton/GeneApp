@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Gene_App
+namespace Gene_App.Jobs.DNA
 {
-    public class Jobs
+    public class DNASerialization
     {   
-        private static string Byte2UnitString(byte bit)
+        private static string ConvertBytetoUnitStrand(byte bit)
         {
             return bit switch
             {
@@ -17,32 +17,32 @@ namespace Gene_App
                 _ => throw new ArgumentOutOfRangeException("can only receive values from 0 to 3, but got:", Convert.ToString(bit, toBase: 2)),
             };
         }
-        private static string Byte2String(byte bit)
+        private static string ConvertBytetoStrand(byte bit)
         {
             var stringBuilder = new StringBuilder(4);
             for(int i = 3; i >= 0; i--)
             {
                 byte x = (byte)(bit >> i * 2);
                 x = (byte)(x & 3); //x and 0b11
-                stringBuilder.Append(Byte2UnitString(x));
+                stringBuilder.Append(ConvertBytetoUnitStrand(x));
             }
             return stringBuilder.ToString();
 
         } 
-        public static string DecodeString(string input)
+        public static string DecodeStrandFromBase64(string input)
         {
             byte[] bytes = Convert.FromBase64String(input);
 
             var stringBuilder = new StringBuilder(bytes.Length*4 );
             foreach(byte b in bytes)
             {
-                stringBuilder.Append(Byte2String(b));
+                stringBuilder.Append(ConvertBytetoStrand(b));
             }
             return stringBuilder.ToString();
 
         }
 
-        private static byte ConvertUnitStringtoByte(string input)
+        private static byte ConvertUnitStrandtoByte(string input)
         {
             return input switch
             {
@@ -54,7 +54,7 @@ namespace Gene_App
 
             };
         }
-        private static byte string2byte(string input)
+        private static byte ConvertStrandtoByte(string input)
         {
             if (input.Length != 4)
             {
@@ -63,21 +63,21 @@ namespace Gene_App
             byte bit = 0;
             for (int i = 0; i <=3; i++)
             {
-                byte x = (byte)(ConvertUnitStringtoByte(input[i].ToString()) << (3-i) * 2);
+                byte x = (byte)(ConvertUnitStrandtoByte(input[i].ToString()) << (3-i) * 2);
                 bit += x;
 
             }
             return bit;
         }
 
-        public static string encodestring(string input)
+        public static string EncodeStrandToBase64(string input)
         {
             var byteList = new List<byte>();
 
             for (int i =0; i < input.Length/4; i++)
             {
                 string dnaSegment = input.Substring(i*4, 4);
-                byteList.Add(string2byte(dnaSegment));
+                byteList.Add(ConvertStrandtoByte(dnaSegment));
             }
             byte[] byteArray = byteList.ToArray();
 
@@ -86,39 +86,15 @@ namespace Gene_App
             {
                 sb.Append(Convert.ToString(b, toBase: 16));
             }
-            Console.WriteLine(sb.ToString());
+           
             return Convert.ToBase64String(byteArray);
 
 
 
 
         }
-        public static string FixTemplate(string s)
-        {
-            if(  s.Substring(0,3).Equals("GTA"))
-            {
-                var charArray = s.ToCharArray();
-                for(int i = 0; i < charArray.Length; i++)
-                {
-                    char c = charArray[i];
-                    switch (c)
-                    {
-                        case 'A':
-                            charArray[i] = 'T';
-                            break;
 
-                    }
-                }
-            }
-            
-        }
 
-        public static bool CheckStrand(string template, string gene)
-        {
-            template = DecodeString(template);
-            gene = DecodeString(gene);
-            
-
-        }
+        
     }
 }

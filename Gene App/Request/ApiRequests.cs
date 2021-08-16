@@ -6,7 +6,8 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gene_App
+
+namespace Gene_App.Request
 {
 
     class ApiRequests
@@ -65,6 +66,10 @@ namespace Gene_App
 
             string responseBody = await response.Content.ReadAsStringAsync();
 
+            
+
+            
+
             var jobRequest = JsonConvert.DeserializeObject<JobRequest>(responseBody);
 
             return jobRequest;
@@ -72,6 +77,25 @@ namespace Gene_App
 
 
 
+
+        }
+        public static async Task<JobRequest> PostJob(JobCompletedRequest jobCompletedRequest, Token token, string url)
+        {
+            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token.AccessToken);
+
+            string jobCompletedJson = ToJson(jobCompletedRequest);
+
+            StringContent postBody = new StringContent(jobCompletedJson, Encoding.UTF8, "application/json");
+
+            HttpResponseMessage response = await client.PostAsync(url, postBody);
+
+            response.EnsureSuccessStatusCode();
+
+            string responseBody = await response.Content.ReadAsStringAsync();
+
+            var jobRequest = JsonConvert.DeserializeObject<JobRequest>(responseBody);
+
+            return jobRequest;
 
         }
     }

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "30k8f0C73814kx9QMf0dp74QB2OpR6akaelcFnoI/9NU5EQQAqF4F+7iHB0G7nAE9IJbjHGRwT1kGkoFsp0zHQ==",
+  "dgSpecHash": "UsENUD3kNrkdOPu0d54LNNSpdOKYT2SwBYE0waj+/NVNFy8Yuqr1zp9c5SudxNinbdKrRc6IjkSswaGP6lRl5w==",
   "success": true,
   "projectFilePath": "A:\\Estudo\\C#\\Learn C#\\Gene_App.TestProject\\Gene_App.TestProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\milan\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
+    "C:\\Users\\milan\\.nuget\\packages\\json.net\\1.0.33\\json.net.1.0.33.nupkg.sha512",
     "C:\\Users\\milan\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",
     "C:\\Users\\milan\\.nuget\\packages\\microsoft.net.test.sdk\\16.9.4\\microsoft.net.test.sdk.16.9.4.nupkg.sha512",
     "C:\\Users\\milan\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

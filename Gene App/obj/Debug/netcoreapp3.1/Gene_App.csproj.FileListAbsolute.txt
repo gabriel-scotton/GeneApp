@@ -1,0 +1,16 @@
+A:\Estudo\C#\Learn C#\Gene App\bin\Debug\netcoreapp3.1\Gene_App.exe
+A:\Estudo\C#\Learn C#\Gene App\bin\Debug\netcoreapp3.1\Gene_App.deps.json
+A:\Estudo\C#\Learn C#\Gene App\bin\Debug\netcoreapp3.1\Gene_App.runtimeconfig.json
+A:\Estudo\C#\Learn C#\Gene App\bin\Debug\netcoreapp3.1\Gene_App.runtimeconfig.dev.json
+A:\Estudo\C#\Learn C#\Gene App\bin\Debug\netcoreapp3.1\Gene_App.dll
+A:\Estudo\C#\Learn C#\Gene App\bin\Debug\netcoreapp3.1\Gene_App.pdb
+A:\Estudo\C#\Learn C#\Gene App\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+A:\Estudo\C#\Learn C#\Gene App\obj\Debug\netcoreapp3.1\Gene_App.csproj.AssemblyReference.cache
+A:\Estudo\C#\Learn C#\Gene App\obj\Debug\netcoreapp3.1\Gene_App.AssemblyInfoInputs.cache
+A:\Estudo\C#\Learn C#\Gene App\obj\Debug\netcoreapp3.1\Gene_App.AssemblyInfo.cs
+A:\Estudo\C#\Learn C#\Gene App\obj\Debug\netcoreapp3.1\Gene_App.csproj.CoreCompileInputs.cache
+A:\Estudo\C#\Learn C#\Gene App\obj\Debug\netcoreapp3.1\Gene_App.csproj.CopyComplete
+A:\Estudo\C#\Learn C#\Gene App\obj\Debug\netcoreapp3.1\Gene_App.dll
+A:\Estudo\C#\Learn C#\Gene App\obj\Debug\netcoreapp3.1\Gene_App.pdb
+A:\Estudo\C#\Learn C#\Gene App\obj\Debug\netcoreapp3.1\Gene_App.genruntimeconfig.cache
+A:\Estudo\C#\Learn C#\Gene App\bin\Debug\netcoreapp3.1\Json.Net.dll

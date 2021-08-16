@@ -4,12 +4,12 @@
     "A:\\Estudo\\C#\\Learn C#\\Gene_App.TestProject\\Gene_App.TestProject.csproj": {}
   },
   "projects": {
-    "A:\\Estudo\\C#\\Learn C#\\Gene App\\Gene App.csproj": {
+    "A:\\Estudo\\C#\\Learn C#\\Gene App\\Gene_App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\Estudo\\C#\\Learn C#\\Gene App\\Gene App.csproj",
-        "projectName": "Gene App",
-        "projectPath": "A:\\Estudo\\C#\\Learn C#\\Gene App\\Gene App.csproj",
+        "projectUniqueName": "A:\\Estudo\\C#\\Learn C#\\Gene App\\Gene_App.csproj",
+        "projectName": "Gene_App",
+        "projectPath": "A:\\Estudo\\C#\\Learn C#\\Gene App\\Gene_App.csproj",
         "packagesPath": "C:\\Users\\milan\\.nuget\\packages\\",
         "outputPath": "A:\\Estudo\\C#\\Learn C#\\Gene App\\obj\\",
         "projectStyle": "PackageReference",
@@ -40,6 +40,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Json.Net": {
+              "target": "Package",
+              "version": "[1.0.33, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
@@ -88,8 +92,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "A:\\Estudo\\C#\\Learn C#\\Gene App\\Gene App.csproj": {
-                "projectPath": "A:\\Estudo\\C#\\Learn C#\\Gene App\\Gene App.csproj"
+              "A:\\Estudo\\C#\\Learn C#\\Gene App\\Gene_App.csproj": {
+                "projectPath": "A:\\Estudo\\C#\\Learn C#\\Gene App\\Gene_App.csproj"
               }
             }
           }
