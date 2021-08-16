@@ -27,9 +27,9 @@ namespace Gene_App.Request
 
         
         
-        public static async Task<Token> RequestToken(string url)           
+        public static async Task<Token> RequestToken(string url, Login login)           
         {
-            var login = new Login("GabrielScotton",  "VivaLItalia");
+            
 
 
             

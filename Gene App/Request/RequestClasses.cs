@@ -26,15 +26,25 @@ namespace Gene_App.Request
     }
     class Login
     {
-
+        public Login()
+        {
+            this.ReadUserInput();
+        }
         public Login(string username, string password)
         {
             this.username = username;
             this.password = password;
         }
+        public void ReadUserInput()
+        {
+            Console.WriteLine("Type your username:");
+            this.username = Console.ReadLine();
+            Console.WriteLine("Type your pasword:");
+            this.password = Console.ReadLine();
+        }
 
-        readonly string username;
-        readonly string password;
+        string username;
+        string password;
 
         public string Username => username;
 

@@ -12,10 +12,10 @@ namespace Gene_App
     {
         
         
-        static async Task<JobRequest> DoJobOperation()
+        static async Task<JobRequest> DoJobOperation(Token token)
         {
-            Token token = await ApiRequests.RequestToken("https://gene.lacuna.cc/api/users/login");
-
+            
+            /*In this f, we check which job was received, then execute it, returning a jobRequest, with only code and message*/
 
             JobRequest jobRequest = await ApiRequests.RequestJob("https://gene.lacuna.cc/api/dna/jobs", token);
 
@@ -59,14 +59,7 @@ namespace Gene_App
 
                     completedRequest.IsActivated = DNAAnalysis.CheckStrandActivation(templateStrand, gene);
                     jobResponse = await ApiRequests.PostJob(completedRequest, token, "https://gene.lacuna.cc/api/dna/jobs/" + jobRequest.JobResult.Id + "/gene");
-
-                    if (jobResponse.Code.Equals("Fail")){
-                        Console.WriteLine(gene);
-                        Console.WriteLine(templateStrand);
-                        Console.WriteLine(!completedRequest.IsActivated);
-
-                    }
-
+                                      
                 }
 
             }
@@ -78,11 +71,31 @@ namespace Gene_App
 
             try
             {
+                string continueLogin = "yes";
 
-                while (true)
+                Login login = new Login();
+
+                while (continueLogin.Equals("yes"))
                 {
-                    var taskState = await DoJobOperation();
-                    Console.WriteLine(taskState.Code);
+                    Token token = await ApiRequests.RequestToken("https://gene.lacuna.cc/api/users/login", login);
+                    if (token.Code.Equals("Success"))
+                    {
+                        await JobLoop(token,1000);
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("login failed, try again? yes/no");
+                        continueLogin = Console.ReadLine();
+                        if (continueLogin.Equals("yes"))
+                        {
+                            login.ReadUserInput();
+                        }
+
+                    }
+
+                    
+                    
                 }
 
                 
@@ -97,6 +110,33 @@ namespace Gene_App
                 Console.WriteLine("Message :{0} ", e.Message);
             }
         }
+        private async static Task<bool> JobLoop(Token token, int repetitions)
+        {
+            
+            
+            string continueJobs = "yes";
+            for(int opCount=0;   continueJobs.Equals("yes") ; opCount++)
+            {
+                
+                var taskState = await DoJobOperation(token);
+                Console.WriteLine(taskState.Code);
+                if (opCount >= repetitions)
+                {
+                    Console.WriteLine("To continue doing stuff type yes,\notherwise type anything else");
+                    continueJobs = Console.ReadLine();
+                    opCount = 0;
+
+
+
+                }
+                
+            }
+            return true;
+
+        }
+
+
     }
+
     
 }
